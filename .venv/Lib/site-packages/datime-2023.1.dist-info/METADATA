@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: datime
+Version: 2023.1
+Summary: Python package with convenience functions for dates, times, and intervals
+Author-email: William Jackson <william@subtlecoolness.com>
+Project-URL: Homepage, https://github.com/williamjacksn/datime
+Project-URL: Bug Tracker, https://github.com/williamjacksn/datime/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# datime
+
+Python package with convenience functions for dates, times, and intervals
+
+## Usage
+
+### `pretty_duration_short`
+
+Use the function `pretty_duration_short` to convert a whole number of seconds to a string that indicates the number of
+hours, minutes, and seconds in the provided duration.
+
+```python
+>>> import datime
+>>> datime.pretty_duration_short(59)
+'59s'
+>>> datime.pretty_duration_short(256)
+'4m16s'
+>>> datime.pretty_duration_short(60 * 60)
+'1h0m0s'
+>>> datime.pretty_duration_short(4096)
+'1h8m16s'
+>>> datime.pretty_duration_short(2**17)
+'36h24m32s'
+```
